@@ -1,0 +1,4 @@
+{
+  "php.validate.run": "onType",
+  "editor.codeActionsOnSave": null
+}
