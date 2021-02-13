@@ -5,15 +5,16 @@ declare(strict_types=1);
 // Complete the compareTriplets function below.
 function compareTriplets(array $a, array $b): array
 {
-  $count = [0, 0];
+  $countA = 0;
+  $countB = 0;
 
   for ($i = 0; $i < 3; $i++) {
     if ($a[$i] > $b[$i]) {
-      $count[0]++;
+      $countA++;
     } else if ($a[$i] < $b[$i]) {
-      $count[1]++;
+      $countB++;
     }
   }
 
-  return $count;
+  return [$countA, $countB];
 }
