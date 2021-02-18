@@ -19,3 +19,4 @@ final class CompareTheTripletsTest extends TestCase
     $this->assertSame($expected, compareTriplets($tripletsA, $tripletsB));
   }
 }
+//comments
