@@ -1,5 +1,7 @@
 <?php
-function SimpleArraySum(array $ar): int
+function DiagonalDifference(array $ar): int
 {
-    return array_sum($ar);
+    $firstD = 0;
+    $secondD = 0;
+    return [$firstD - $secondD];
 }
