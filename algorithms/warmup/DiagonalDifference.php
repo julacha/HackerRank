@@ -1,39 +1,45 @@
+declare(strict_types=1);
 <?php
-echo "hello world";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-// function DiagonalDifference($arr)
-// {
-$arr = array(
+echo "hello world";
+$arr = (array(
     array(11, 2, 4),
     array(4, 5, 6),
     array(10, 8, -12),
-);
-$firstD = 0;
-$secondD = 0;
-$Diag = count($arr);
-echo $Diag;
-for ($i = 0; $i < $Diag; $i++) :
-    for ($j = 0; $j < $Diag; $j++) :
-        if ($i == $j) :
-            $firstD += $arr[$i][$j];
-        endif;
+));
+
+function DiagonalDifference(array $arr): int
+{
+    $firstD = 0;
+    $secondD = 0;
+    $Diag = count($arr);
+    //echo $Diag;
+    for ($i = 0; $i < $Diag; $i++) :
+        for ($j = 0; $j < $Diag; $j++) :
+            if ($i == $j) :
+                //echo $arr[$i][$j];
+                $firstD += $arr[$i][$j];
+            endif;
+        endfor;
     endfor;
-endfor;
-echo $firstD;
+    //echo $firstD;
 
 
-for ($i = 0; $i < $Diag; $i++) :
-    for ($j = 0; $j < $Diag; $j++) :
-        if (($i + $j) == ($Diag - 1)) :
-            $secondD += $arr[$i][$j];
-        endif;
+    for ($i = 0; $i < $Diag; $i++) :
+        for ($j = 0; $j < $Diag; $j++) :
+            if (($i + $j) == ($Diag - 1)) :
+                $secondD += $arr[$i][$j];
+            endif;
+        endfor;
     endfor;
-endfor;
-echo $secondD;
-$result = abs($firstD - $secondD);
-echo $result;
-//}
-
+    //echo $secondD;
+    $result = abs($firstD - $secondD);
+    return $result;
+}
+echo DiagonalDifference($arr);
 //----------------------------------
 // $arr = array(
 //     11, 2, 4,
