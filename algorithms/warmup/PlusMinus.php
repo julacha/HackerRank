@@ -7,18 +7,19 @@ $arr = array(-4, 3, -9, 0, 4, 1);
 function PlusMinus(array $arr): int
 {
     $count = count($arr);
-    $array_new[] = array();
+    //$array_new[] = array();
     for ($i = 0; $i < $count; $i++) {
         //echo $arr[$i];
         if ($arr[$i] > 0) {
             //echo $arr[$i];
-            $array_new[$i] = $arr[$i];
-            echo $array_new[$i];
+            $result = $arr[$i];
+            $result /= $count;
+            // //echo $array_new[$i];
             // foreach ($array_new as $value) {
-            //     //echo $sum;
-            //     $value = $value / $sum;
+            //     echo $value;
+            //     $result /= $array_new[$i];
             // }
-            // return  $array_new;
+            echo $result;
         }
     }
 }
