@@ -1,25 +1,27 @@
 <?php
 
 declare(strict_types=1);
+
+use phpDocumentor\Reflection\Types\Float_;
+
 echo "hello world";
 
 $arr = array(-4, 3, -9, 0, 4, 1);
-function PlusMinus(array $arr): int
+function PlusMinus(array $arr): float
 {
     $count = count($arr);
-    //$array_new[] = array();
+    $array_new = array();
     for ($i = 0; $i < $count; $i++) {
         //echo $arr[$i];
         if ($arr[$i] > 0) {
+            $arr[$i] /= $count;
             //echo $arr[$i];
-            $result = $arr[$i];
-            $result /= $count;
-            // //echo $array_new[$i];
-            // foreach ($array_new as $value) {
-            //     echo $value;
-            //     $result /= $array_new[$i];
-            // }
-            echo $result;
+            $array_new[] = $arr[$i];
+            //echo $array_new;
+            foreach ($array_new as $each_number) {
+                $each_number = (float)$each_number;
+                return (float)$each_number;
+            }
         }
     }
 }
