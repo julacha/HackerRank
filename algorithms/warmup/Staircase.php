@@ -2,16 +2,24 @@
 
 declare(strict_types=1);
 
-echo "hello world";
-
-function Staircase(int $n)
+//echo "hello world";
+$n = 6;
+function Staircase($n)
 {
-    $st = '';
+    for ($rows = 0; $rows < $n; $rows++) {
 
-    for ($i = 0; $i <= 6; $i++) {
-        $st += "#";
+        for ($columns = 0; $columns < $n - $rows - 1; $columns++) {
+
+            echo " ";
+        }
+
+        for ($columns = 0; $columns < $rows + 1; $columns++) {
+
+            echo "#";
+        }
+        echo "\n";
     }
-    echo $st;
+    return;
     $stdin = fopen("php://stdin", "r");
 
     fscanf($stdin, "%d\n", $n);
