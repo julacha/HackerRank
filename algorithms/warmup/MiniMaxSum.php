@@ -7,38 +7,22 @@ echo "hello world";
 $arr = array(1, 2, 3, 4, 5);
 // echo $count;
 // echo $sum; 
-function MiniMaxSum($arr)
+function MiniMaxSum($arr): array
 {
-    $size = sizeof($arr);
-    $count = count($arr);
     $arr = array(1, 2, 3, 4, 5);
+    //echo $count;
     $min_sum = 0;
     $max_sum = 0;
     $min = min($arr);
+    $max = max($arr);
     //echo $min;
-    //echo max($arr);
-    foreach ($arr as &$value) {
-        if ($value > $min) {
-            //echo $value;
-            $min_sum += $value;
-            echo  $min_sum;
-        }
-    }
-    // if (array_splice($arr, 1, 1)) {
-    //     //array_push($arr, $arr[0]);
-    //     echo $arr[0];
-    //     //echo array_sum($arr);
-    // }
+    //echo $max;
+    $max_sum = array_sum($arr) - $min;
+    //echo $max_sum;
+    $min_sum = array_sum($arr) - $max;
+    //echo $min_sum;
 
-    // if (array_splice($arr, 2, 1)) {
-    //     // array_push($arr, $arr[0]);
-    //     // echo  $arr[0];
-    //     // array_push($arr, $arr[1]);
-    //     // echo  $arr[1];
-    //     // echo array_sum($arr);
-    // }
-
-    return;
+    return [$min_sum, $max_sum];
     $stdin = fopen("php://stdin", "r");
 
     fscanf($stdin, "%[^\n]", $arr_temp);

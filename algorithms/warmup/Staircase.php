@@ -10,7 +10,7 @@ function Staircase($n)
 
         for ($columns = 0; $columns < $n - $rows - 1; $columns++) {
 
-            echo " ";
+            echo "";
         }
 
         for ($columns = 0; $columns < $rows + 1; $columns++) {
@@ -18,6 +18,7 @@ function Staircase($n)
             echo "#";
         }
         echo "\n";
+        echo "<br>";
     }
     return;
     $stdin = fopen("php://stdin", "r");
