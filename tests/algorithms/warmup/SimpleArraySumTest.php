@@ -11,7 +11,6 @@ final class SimpleArraySumTest extends TestCase
 {
     /**
      * @testWith [[1, 2, 3, 4, 10, 11],31]
-     *  
      */
     public function test_SimpleArraySum(array $ar, int $expected): void
     {
