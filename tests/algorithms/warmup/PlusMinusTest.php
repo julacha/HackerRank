@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 final class PlusMinus extends TestCase
 {
     /**
-     * @testWith [[-4, 3, -9, 0, 4, 1], 0.500000,0.333333,0.166667]
+     * @testWith [[]
      */
     public function test_PlusMinus(array $arr, int $expected): void
     {
