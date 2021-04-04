@@ -6,7 +6,7 @@ echo "hello world";
 
 $arr = array(1, 2, 3, 4, 5);
 
-function MiniMaxSum($arr): int
+function MiniMaxSum($arr)
 {
     $arr = array(1, 2, 3, 4, 5);
     $count = count($arr);

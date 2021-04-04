@@ -1,20 +1,29 @@
 <?php
 
 declare(strict_types=1);
-
+echo "hello world";
+$candles = array(3, 2, 1, 3);
 // Complete the compareTriplets function below.
-$arr = array(3, 2, 1, 3);
-$n = count($arr);
-$candles =[];
-function BirthdayCakeCandles($arr): int
+function BirthdayCakeCandles($candles)
 {
-    $arr = array(3, 2, 1, 3);
-    for ($i = 0; $i < $n; $i++) {
-        $max = max($arr);
-        echo $max;
-
-    return [];
+    $candles = array(3, 2, 1, 3);
+    $maxValue = max($candles);
+    $candle = 0;
+    //$candle = 0;
+    //echo $maxValue;
+    //print_r(array_filter($arr));
+    // $candle = count(array_filter($arr, function ($i) {
+    //     return $i == $maxValue;
+    // }));
+    foreach ($candles as $key => $val) {
+        if ($val == $maxValue) {
+            //echo $key;
+            $candle = array_count_values($candles)[$maxValue];
+            return  $candle;
+        }
+    }
 }
+echo BirthdayCakeCandles($candles);
 $fptr = fopen(getenv("OUTPUT_PATH"), "w");
 
 $candles_count = intval(trim(fgets(STDIN)));
