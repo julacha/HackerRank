@@ -4,7 +4,7 @@ declare(strict_types=1);
 echo "hello world";
 $candles = array(3, 2, 1, 3);
 // Complete the compareTriplets function below.
-function BirthdayCakeCandles($candles): intadde
+function BirthdayCakeCandles($candles): int
 {
     $candles = array(3, 2, 1, 3);
     $maxValue = max($candles);
